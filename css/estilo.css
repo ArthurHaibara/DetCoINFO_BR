@@ -1,0 +1,258 @@
+/* Reset básico e unidades relativas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .logo img{
+    width: 4em;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f7;
+    color: #333333;
+    font-size: 1.25em;
+}
+
+/* 1. Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 75em; /* 1200px */
+    min-width: 20em; /* 320px */
+    margin: 2em auto;
+    padding: 0 2em; 
+    min-height: 60vh;
+}
+
+header {
+    background-color: #00386f;
+    color: #fff;
+    padding: 1.5em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.2); /* CSS3: box-shadow (4px 8px) */
+}
+
+/* CSS3: text-shadow */
+header h1 {
+    text-shadow: 0.06em 0.06em 0.18em rgba(255,255,255,0.3); /* 1px 1px 3px */
+}
+
+/* Navegação e links ativos */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3em; /* CSS3: border-radius (5px) */
+    transition: background-color 0.3s;
+    cursor: pointer; /* Exigência: cursor no menu */
+}
+
+nav a:hover, nav a.ativo {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+header nav ul li a:hover {
+    background-color: #16a085;
+}
+
+/* Estrutura Principal e Secundária */
+#principal {
+    flex: 3;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 0.5em; /* 8px */
+    margin-right: 2em; /* 2% */
+    box-shadow: 0 0.12em 0.3em rgba(0,0,0,0.05); /* 2px 5px */
+}
+
+#secundario {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 2em;
+    border-radius: 0.5em; /* 8px */
+}
+
+/* Elemento que acompanha o scroll */
+.btn-scroll {
+    position: fixed; 
+    bottom: 1.8em; /* 30px */
+    right: 1.8em; /* 30px */
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.6em 0.9em; /* 10px 15px */
+    border-radius: 50em; /* 50% para em */
+    text-decoration: none;
+    box-shadow: 0.12em 0.12em 0.6em rgba(0,0,0,0.3); /* 2px 2px 10px */
+    z-index: 9999; 
+}
+.btn-scroll:hover {
+    background-color: #c0392b;
+}
+.btn-top {
+    bottom: 5em;
+}
+.btn-final {
+    bottom: 1.8em;
+}
+
+/* --- ESTILO DA PÁGINA 2 (TABELA) --- */
+.conteudo-tabela {
+    width: 100%; 
+    max-width: 75em;
+    background: #fff;
+    padding: 2em;
+    border-radius: 0.5em; /* 8px */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+th, td {
+    border: 0.06em solid #bdc3c7; /* 1px */
+    padding: 0.9em; /* 15px */
+    text-align: center;
+}
+td[rowspan] {
+    background-color: rgba(211, 211, 211, 0.093);
+    text-align: center;
+    vertical-align: top;
+}
+th {
+    background-color: #00386f;
+    color: #fff;
+}
+tbody tr:hover {
+    background-color: #e7e7e7;
+}
+tbody td:hover {
+    background-color: #aaaaaa;
+    color: #fff;
+    cursor: help;
+}
+
+/* --- ESTILO DA PÁGINA 3 (LISTA) --- */
+.listafilmes {
+    width: 100%;
+    max-width: 75em;
+    background: #fff;
+    padding: 2em;
+    border-radius: 0.5em; /* 8px */
+}
+.lista-filmes {
+    margin-top: 1.5em;
+    margin-left: 2em;
+}
+.lista-filmes img {
+    width: 6em;
+    height: 9em;
+}
+.lista-filmes li {
+    display: flex;
+    align-items: center;
+}
+.lista-filmes li {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #f9f9f9;
+    border-radius: 0.25em; /* 4px */
+    transition: transform 0.2s, background-color 0.2s;
+}
+.lista-filmes li:hover {
+    background-color: #dff9fb;
+    transform: translateX(0.6em); /* 10px */
+}
+
+/* --- ESTILO DA PÁGINA 4 (FORMULÁRIO) --- */
+.conteudo-formulario {
+    width: 100%;
+    max-width: 43.75em; /* 700px */
+    margin: 0 auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 0.5em; /* 8px */
+    box-shadow: 0 0.25em 0.6em rgba(0,0,0,0.05); /* 4px 10px */
+}
+.grupo-campo {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.grupo-campo label {
+    margin-bottom: 0.4em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.grupo-campo input[type="text"],
+.grupo-campo input[type="email"],
+.grupo-campo input[type="tel"],
+.grupo-campo select,
+.grupo-campo textarea {
+    padding: 0.8em;
+    border: 0.06em solid #ccc; /* 1px */
+    border-radius: 0.25em; /* 4px */
+    font-size: 1em;
+}
+.opcoes-inline {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.opcoes-inline input {
+    margin-right: 0.3em;
+}
+.checkbox-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+.grupo-botoes {
+    display: flex;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+.grupo-botoes button {
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 0.25em; /* 4px */
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+}
+button[type="submit"] { background-color: #27ae60; }
+button[type="submit"]:hover { background-color: #2ecc71; }
+button[type="reset"] { background-color: #c0392b; }
+button[type="reset"]:hover { background-color: #e74c3c; }
+
+/* --- FOOTER --- */
+footer {
+    background-color: #00386f;
+    color: #bdc3c7;
+    padding: 2em 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    clear: both;
+    margin-top: 2em;
+}
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

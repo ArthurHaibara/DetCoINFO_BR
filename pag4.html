@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Página inicial do site sobre Detective Conan">
+    <meta name="author" content="Arthur Mackedanz Ribeiro">
+    <meta name="keywords" content="Detective Conan, Cronologia, Arcos, Temporadas, Episódios, Mangá, Anime, filmes">
+    <title>DC - Feedback</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logotipo do Site">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="">Início</a></li>
+                <li><a href="pag2.html" class="">Temporadas/arcos</a></li>
+                <li><a href="pag3.html" class="">Filmes</a></li>
+                <li><a href="pag4.html" class="ativo">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        
+        <section class="conteudo-formulario">
+            <h2>Formulário de Feedback</h2>
+            <form action="#" method="get">
+                <div class="grupo-campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" >
+                </div>
+                
+                <div class="grupo-campo">
+                    <label>Preferência de Contato:</label>
+                    <div class="opcoes-inline">
+                        <input type="radio" id="pref_email" name="preferencia" value="email">
+                        <label for="pref_email">E-mail</label>
+                        
+                        <input type="radio" id="pref_tel" name="preferencia" value="telefone">
+                        <label for="pref_tel">Telefone</label>
+                    </div>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="assunto">Assunto (Select):</label>
+                    <select id="assunto" name="assunto" required>
+                        <placeholder value="">Selecione...</placeholder>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="reclamacao">Reclamação</option>
+                    </select>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="mensagem">Sua Opinião/Feedback:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <div class="grupo-campo checkbox-container">
+                    <input type="checkbox" id="termos" name="termos" value="aceito">
+                    <label for="termos">Aceito os termos e condições (Checkbox)</label>
+                </div>
+                
+                <div class="grupo-botoes">
+                    <button type="submit">Enviar (Submit)</button>
+                    <button type="reset">Limpar (Reset)</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Elemento exigido que acompanha o scroll da página -->
+    <a href="#" class="btn-scroll">Inicio</a>
+
+    <footer>
+        <div class="contatos">
+            <p><strong>Contato:</strong></p>
+            <p>Endereço: Rua Lorem Ipsum, 123 - Bairro Fictício, Cidade</p>
+            <p>Telefone: (00) 90000-0000</p>
+            <p>E-mail: contato@meusite.com.br</p>
+        </div>
+        <div class="links">
+            <p><strong>Links Úteis:</strong></p>
+            <ul>
+                <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
