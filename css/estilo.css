@@ -84,7 +84,7 @@ header nav ul li a:hover {
     border-radius: 0.5em; /* 8px */
 }
 
-/* Elemento que acompanha o scroll */
+/* Botão que acompanha o scroll */
 .btn-scroll {
     position: fixed; 
     bottom: 1.8em; /* 30px */
@@ -92,7 +92,7 @@ header nav ul li a:hover {
     background-color: #e74c3c;
     color: #fff;
     padding: 0.6em 0.9em; /* 10px 15px */
-    border-radius: 50em; /* 50% para em */
+    border-radius: 50%;
     text-decoration: none;
     box-shadow: 0.12em 0.12em 0.6em rgba(0,0,0,0.3); /* 2px 2px 10px */
     z-index: 9999; 
@@ -129,6 +129,11 @@ td[rowspan] {
     background-color: rgba(211, 211, 211, 0.093);
     text-align: center;
     vertical-align: top;
+}
+.texto-rowspan {
+    position: sticky;
+    top: 1em;
+    display: block;
 }
 th {
     background-color: #00386f;
@@ -255,4 +260,7 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+.links {
+    margin-right: 4em;
 }
