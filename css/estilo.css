@@ -1,14 +1,16 @@
-/* Reset básico e unidades relativas */
+/* Remove margens padrão e padroniza o cálculo das dimensões. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Limita o tamanho visual do logotipo no cabeçalho. */
 header .logo img{
     width: 4em;
 }
 
+/* Define tipografia, cores e tamanho base do site. */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f7;
@@ -16,7 +18,7 @@ body {
     font-size: 1.25em;
 }
 
-/* 1. Layout */
+/* Organiza o conteúdo em um layout flexível com limites de largura. */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +29,7 @@ body {
     min-height: 60vh;
 }
 
+/* Alinha o logotipo e o menu no cabeçalho. */
 header {
     background-color: #00386f;
     color: #fff;
@@ -42,7 +45,7 @@ header h1 {
     text-shadow: 0.06em 0.06em 0.18em rgba(255,255,255,0.3); /* 1px 1px 3px */
 }
 
-/* Navegação e links ativos */
+/* Exibe os itens de navegação em linha. */
 nav ul {
     list-style: none;
     display: flex;
@@ -58,16 +61,18 @@ nav a {
     cursor: pointer; /* Exigência: cursor no menu */
 }
 
+/* Destaca o link ativo e o link sob o cursor. */
 nav a:hover, nav a.ativo {
     background-color: #1abc9c;
     color: #fff;
 }
 
+/* Seletor profundo altera a cor ao passar o cursor sobre links do menu. */
 header nav ul li a:hover {
     background-color: #16a085;
 }
 
-/* Estrutura Principal e Secundária */
+/* Dá mais espaço e destaque ao conteúdo principal. */
 #principal {
     flex: 3;
     background-color: #fff;
@@ -77,6 +82,7 @@ header nav ul li a:hover {
     box-shadow: 0 0.12em 0.3em rgba(0,0,0,0.05); /* 2px 5px */
 }
 
+/* Separa visualmente as informações complementares. */
 #secundario {
     flex: 1;
     background-color: #ecf0f1;
@@ -84,7 +90,7 @@ header nav ul li a:hover {
     border-radius: 0.5em; /* 8px */
 }
 
-/* Botão que acompanha o scroll */
+/* Mantém o atalho visível durante a rolagem da página. */
 .btn-scroll {
     position: fixed; 
     bottom: 1.8em; /* 30px */
@@ -97,6 +103,7 @@ header nav ul li a:hover {
     box-shadow: 0.12em 0.12em 0.6em rgba(0,0,0,0.3); /* 2px 2px 10px */
     z-index: 9999; 
 }
+/* Reforça visualmente o botão fixo ao passar o cursor. */
 .btn-scroll:hover {
     background-color: #c0392b;
 }
@@ -107,7 +114,8 @@ header nav ul li a:hover {
     bottom: 1.8em;
 }
 
-/* --- ESTILO DA PÁGINA 2 (TABELA) --- */
+/* --- TABELA DE TEMPORADAS E EPISÓDIOS --- */
+/* Define o painel que envolve a tabela. */
 .conteudo-tabela {
     width: 100%; 
     max-width: 75em;
@@ -115,30 +123,36 @@ header nav ul li a:hover {
     padding: 2em;
     border-radius: 0.5em; /* 8px */
 }
+/* Ocupa toda a largura e une as bordas das células. */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1em;
 }
+/* Formata as células da tabela. */
 th, td {
     border: 0.06em solid #bdc3c7; /* 1px */
     padding: 0.9em; /* 15px */
     text-align: center;
 }
+/* Identifica visualmente células mescladas por arco ou temporada. */
 td[rowspan] {
     background-color: rgba(211, 211, 211, 0.093);
     text-align: center;
     vertical-align: top;
 }
+/* Mantém visível o rótulo das células mescladas durante a rolagem. */
 .texto-rowspan {
     position: sticky;
     top: 1em;
     display: block;
 }
+/* Diferencia o cabeçalho das demais linhas. */
 th {
     background-color: #00386f;
     color: #fff;
 }
+/* Realça linhas e células da tabela durante a interação com o cursor. */
 tbody tr:hover {
     background-color: #e7e7e7;
 }
@@ -148,7 +162,8 @@ tbody td:hover {
     cursor: help;
 }
 
-/* --- ESTILO DA PÁGINA 3 (LISTA) --- */
+/* --- LISTA DE FILMES --- */
+/* Define o painel que envolve os filmes. */
 .listafilmes {
     width: 100%;
     max-width: 75em;
@@ -156,18 +171,22 @@ tbody td:hover {
     padding: 2em;
     border-radius: 0.5em; /* 8px */
 }
+/* Ajusta o recuo e o espaçamento da lista. */
 .lista-filmes {
     margin-top: 1.5em;
     margin-left: 2em;
 }
+/* Padroniza o tamanho dos cartazes dos filmes. */
 .lista-filmes img {
     width: 6em;
     height: 9em;
 }
+/* Alinha o cartaz e as informações de cada filme. */
 .lista-filmes li {
     display: flex;
     align-items: center;
 }
+/* Aplica espaçamento, fundo e transição aos itens da lista. */
 .lista-filmes li {
     padding: 0.5em;
     margin-bottom: 0.5em;
@@ -175,12 +194,14 @@ tbody td:hover {
     border-radius: 0.25em; /* 4px */
     transition: transform 0.2s, background-color 0.2s;
 }
+/* Destaca cada filme quando o cursor passa sobre o item. */
 .lista-filmes li:hover {
     background-color: #dff9fb;
     transform: translateX(0.6em); /* 10px */
 }
 
-/* --- ESTILO DA PÁGINA 4 (FORMULÁRIO) --- */
+/* --- FORMULÁRIO DE FEEDBACK --- */
+/* Centraliza e limita a largura do formulário. */
 .conteudo-formulario {
     width: 100%;
     max-width: 43.75em; /* 700px */
@@ -190,6 +211,7 @@ tbody td:hover {
     border-radius: 0.5em; /* 8px */
     box-shadow: 0 0.25em 0.6em rgba(0,0,0,0.05); /* 4px 10px */
 }
+/* Organiza os controles em grupos verticais. */
 .grupo-campo {
     margin-top: 1.2em;
     margin-bottom: 1.2em;
@@ -197,11 +219,13 @@ tbody td:hover {
     flex-direction: column;
     text-align: center;
 }
+/* Destaca os rótulos dos campos. */
 .grupo-campo label {
     margin-bottom: 0.4em;
     font-weight: bold;
     color: #2c3e50;
 }
+/* Padroniza os campos de texto, seleção e mensagem. */
 .grupo-campo input[type="text"],
 .grupo-campo input[type="email"],
 .grupo-campo input[type="tel"],
@@ -212,24 +236,29 @@ tbody td:hover {
     border-radius: 0.25em; /* 4px */
     font-size: 1em;
 }
+/* Mantém as opções de contato lado a lado. */
 .opcoes-inline {
     display: flex;
     gap: 1em;
     align-items: center;
 }
+/* Ajusta o espaço dos botões de opção. */
 .opcoes-inline input {
     margin-right: 0.3em;
 }
+/* Alinha a caixa de seleção com seu rótulo. */
 .checkbox-container {
     flex-direction: row;
     align-items: center;
     gap: 0.5em;
 }
+/* Organiza os botões de envio e limpeza. */
 .grupo-botoes {
     display: flex;
     gap: 1em;
     margin-top: 1.5em;
 }
+/* Padroniza a aparência e a interação dos botões. */
 .grupo-botoes button {
     padding: 0.8em 1.5em;
     border: none;
@@ -238,12 +267,14 @@ tbody td:hover {
     font-weight: bold;
     color: #fff;
 }
+/* Diferencia visualmente as ações de envio e limpeza. */
 button[type="submit"] { background-color: #27ae60; }
 button[type="submit"]:hover { background-color: #2ecc71; }
 button[type="reset"] { background-color: #c0392b; }
 button[type="reset"]:hover { background-color: #e74c3c; }
 
-/* --- FOOTER --- */
+/* --- RODAPÉ COM CONTATO E LINKS ÚTEIS --- */
+/* Distribui as informações do rodapé em colunas flexíveis. */
 footer {
     background-color: #00386f;
     color: #bdc3c7;
@@ -254,6 +285,7 @@ footer {
     clear: both;
     margin-top: 2em;
 }
+/* Define a cor dos links úteis e o destaque ao passar o cursor. */
 footer a {
     color: #3498db;
     text-decoration: none;
