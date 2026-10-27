@@ -1,3 +1,4 @@
+/* ESTILOS GERAIS — TODAS AS PÁGINAS */
 /* Remove margens padrão e padroniza o cálculo das dimensões. */
 * {
     margin: 0;
@@ -72,6 +73,7 @@ header nav ul li a:hover {
     background-color: #16a085;
 }
 
+/* PÁGINA 1 — INÍCIO */
 /* Dá mais espaço e destaque ao conteúdo principal. */
 #principal {
     flex: 3;
@@ -90,6 +92,7 @@ header nav ul li a:hover {
     border-radius: 0.5em; /* 8px */
 }
 
+/* TODAS AS PÁGINAS — ATALHO FIXO DE NAVEGAÇÃO */
 /* Mantém o atalho visível durante a rolagem da página. */
 .btn-scroll {
     position: fixed; 
@@ -114,7 +117,7 @@ header nav ul li a:hover {
     bottom: 1.8em;
 }
 
-/* --- TABELA DE TEMPORADAS E EPISÓDIOS --- */
+/* PÁGINA 2 — TEMPORADAS E ARCOS (TABELA) */
 /* Define o painel que envolve a tabela. */
 .conteudo-tabela {
     width: 100%; 
@@ -162,7 +165,7 @@ tbody td:hover {
     cursor: help;
 }
 
-/* --- LISTA DE FILMES --- */
+/* PÁGINA 3 — FILMES (LISTA) */
 /* Define o painel que envolve os filmes. */
 .listafilmes {
     width: 100%;
@@ -170,6 +173,15 @@ tbody td:hover {
     background: #fff;
     padding: 2em;
     border-radius: 0.5em; /* 8px */
+}
+/* Remove marcadores e espaçamento padrão da lista e adiciona o ícone. */
+.lista-filmes li::before {
+    content: "";
+    flex: 0 0 1em;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    background: url("../imagens/icone.png") center / contain no-repeat;
 }
 /* Ajusta o recuo e o espaçamento da lista. */
 .lista-filmes {
@@ -200,7 +212,7 @@ tbody td:hover {
     transform: translateX(0.6em); /* 10px */
 }
 
-/* --- FORMULÁRIO DE FEEDBACK --- */
+/* PÁGINA 4 — FEEDBACK (FORMULÁRIO) */
 /* Centraliza e limita a largura do formulário. */
 .conteudo-formulario {
     width: 100%;
@@ -273,7 +285,7 @@ button[type="submit"]:hover { background-color: #2ecc71; }
 button[type="reset"] { background-color: #c0392b; }
 button[type="reset"]:hover { background-color: #e74c3c; }
 
-/* --- RODAPÉ COM CONTATO E LINKS ÚTEIS --- */
+/* TODAS AS PÁGINAS — RODAPÉ COM CONTATO E LINKS ÚTEIS */
 /* Distribui as informações do rodapé em colunas flexíveis. */
 footer {
     background-color: #00386f;
